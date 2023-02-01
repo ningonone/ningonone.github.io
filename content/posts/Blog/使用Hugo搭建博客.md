@@ -32,7 +32,7 @@ Built in 20 ms
 
 说明该主题需要下载带有扩展包的hugo版本
 
-![image](../../../assets/image-20230131172703-42s89uz.png)
+![image](/images/blog/hugodownload.png)
 ‍
 
 ## Github Pages
@@ -92,7 +92,7 @@ tags:
 修改字体样式似乎在每个主题的方法不一样，具体得看代码。
 我用的是落霞孤鹜文楷体，找到head代码位置，直接引入
 ```html
-<link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css"media="print" onload="this.media='all'">
+ <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" />
 ```
 Loveit主题的话我是找到主题文件中的\themes\LoveIt\assets\css\_variables.scss，修改全局字体变量global-font-family如下：
 ```scss
