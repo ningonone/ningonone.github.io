@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>NINGO&#39;s Personal Website</title>
-        <link>https://ningonone.github.io/</link>
-        <description>Hugo theme - LoveIt</description>
+        <title>Hugo - 标签 - NINGO&#39;s Personal Website</title>
+        <link>https://ningonone.github.io/tags/hugo/</link>
+        <description>Hugo - 标签 - NINGO&#39;s Personal Website</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>949156636@qq.com (NINGO)</managingEditor>
-            <webMaster>949156636@qq.com (NINGO)</webMaster><lastBuildDate>Thu, 01 Dec 2022 09:36:28 &#43;0800</lastBuildDate>
-            <atom:link href="https://ningonone.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>949156636@qq.com (NINGO)</webMaster><lastBuildDate>Thu, 01 Dec 2022 09:36:28 &#43;0800</lastBuildDate><atom:link href="https://ningonone.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
     <title>使用Hugo搭建博客</title>
     <link>https://ningonone.github.io/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
     <pubDate>Thu, 01 Dec 2022 09:36:28 &#43;0800</pubDate>
