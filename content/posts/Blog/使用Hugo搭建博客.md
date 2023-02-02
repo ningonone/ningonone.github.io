@@ -32,7 +32,7 @@ Built in 20 ms
 
 说明该主题需要下载带有扩展包的hugo版本
 
-![image](/images/blog/hugodownload.png)
+{{< figure src="/images/blog/hugodownload.png" >}}
 ‍
 
 ## Github Pages
