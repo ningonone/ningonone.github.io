@@ -10,7 +10,7 @@
 
 Spec的目录大概如下：
 
-​![image](/images/blog/image-20230201160931-16dmycr.png)​
+{{< figure src="/images/blog/image-20230201160931-16dmycr.png" title="" >}}​​​
 
 我们重点关注的是：
 
@@ -30,7 +30,7 @@ Spec的目录大概如下：
 
 ### 2.**Power on/off sequence**
 
-​![image](/images/blog/image-20230201161650-vztdce3.png)​
+{{< figure src="/images/blog/image-20230201161650-vztdce3.png" title="" >}}​​
 
 如果屏幕点不亮就需要首先看上电下电的时序。
 
@@ -38,7 +38,8 @@ Spec的目录大概如下：
 
 ### 3.**Timing**
 
-​![image](/images/blog/image-20230201162731-r92c2cs.png)​
+{{< figure src="/images/blog/image-20230201162731-r92c2cs.png" title="" >}}​​
+
 
 #### 屏参及其计算
 
@@ -54,9 +55,10 @@ hsync_len 和vsync_len 分别是hsync和vsync 同步信号所需要的时间
 
 原理图如下：
 
-​![image](/images/blog/image-20220817161636-gixjxz5.png)​
+{{< figure src="/images/blog/image-20220817161636-gixjxz5.png" title="" >}}​
+{{< figure src="/images/blog/image-20220908172036-mfov8t2.png" title="" >}}​
 
-​![image](/images/blog/image-20220908172036-mfov8t2.png)​
+​
 
 #### DE模式和HV模式
 
@@ -120,9 +122,8 @@ Delay_ms 表示延时 xx 毫秒
 这涉及到了 dsi 协议中 dsi 传输的数据类型。  
 根据 《MIPI-DSI-specification.pdf》可以看到，有如下这些数据类型。
 
-​![image](/images/blog/image-20230201173759-30nzoop.png)​
+{{< figure src="/images/blog/image-20230201173759-30nzoop.png" >}}
 
-‍
 
 ## 三、调试流程
 

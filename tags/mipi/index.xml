@@ -12,7 +12,7 @@
     <guid>https://ningonone.github.io/mipi-lcd-%E7%A7%BB%E6%A4%8D%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B/</guid>
     <description><![CDATA[MIPI LCD 移植调试流程 一、提取 datasheet 中的关键信息 首先需要找屏厂索取屏的规格书，提取出关键的信息。
 Spec的目录大概如下：
-​​
+​​​
 我们重点关注的是：
 General Specification ​屏幕规格
 Power on/off sequence 上电下电时序
