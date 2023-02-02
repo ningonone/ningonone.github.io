@@ -98,6 +98,32 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h1 class="home-title">NINGO</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/https://github.com/ningonone" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="https://weibo.com/7480612162" title="微博" target="_blank" rel="noopener noreffer me"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="https://steamcommunity.com/id/hosee141" title="Steam" target="_blank" rel="noopener noreffer me"><i class="fab fa-steam fa-fw" aria-hidden="true"></i></a><a href="https://www.zhihu.com/people/blank141" title="知乎" target="_blank" rel="noopener noreffer me"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/zhihu.svg" aria-hidden="true"></i></a><a href="https://www.douban.com/people/NINGO404" title="豆瓣" target="_blank" rel="noopener noreffer me"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/douban.svg" aria-hidden="true"></i></a><a href="https://space.bilibili.com/175398005" title="bilibili" target="_blank" rel="noopener noreffer me"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/bilibili.svg" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/mipi-lcd-%E7%A7%BB%E6%A4%8D%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B/">MIPI LCD 移植调试流程</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>NINGO</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-02-01">2023-02-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux-bsp/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux Bsp</a></span></div><div class="content">MIPI LCD 移植调试流程 一、提取 datasheet 中的关键信息 首先需要找屏厂索取屏的规格书，提取出关键的信息。
+Spec的目录大概如下：
+​​
+我们重点关注的是：
+General Specification ​屏幕规格
+Power on/off sequence 上电下电时序
+Timing 屏参
+‍
+1.General Specification ​ 主要找到分辨率、Mipi data 信号线通道数(一般是4 lane)，如果有RGB Bit 位数(6Bit/8Bit)、驱动IC的型号(Driver IC),也可将信息提取出来。
+‍
+2.Power on/off sequence ​​
+如果屏幕点不亮就需要首先看上电下电的时序。
+‍
+3.Timing ​​
+屏参及其计算 hsync_len 和vsync_len 分别是hsync和vsync 同步信号所需要的时间
+水平分辨率：hactive 垂直分辨率：vactive
+水平前肩：hfront-porch(HFP) 垂直前肩：vfront-porch(VFP)
+水平后肩：hback-porch(HBP) 垂直后肩：vback-porch(VBP)
+水平消隐信号：hsync-len(HS) 垂直消隐信号：vsync-len(VS)
+1.lane-rate = clk(时钟频率) * RGB(3) * BIT(6或8) / lane_num ，lane_num表示差分时钟通道数，也就是刚刚在 General Specification中提取的 Mipi data lane。
+2.帧率、屏参和时钟频率的关系： clock-frequency=(水平分辨率+HS+HBP+HFP)(垂直分辨率+VS+VBP=VFP)fps(帧频率)；
+原理图如下：</div><div class="post-footer">
+        <a href="/mipi-lcd-%E7%A7%BB%E6%A4%8D%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/mipi/">MIPI</a>,&nbsp;<a href="/tags/display/">Display</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">使用Hugo搭建博客</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>NINGO</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-01">2022-12-01</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/blog/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Blog</a></span></div><div class="content">Install 下载hugo，设置环境变量，执行 hugo version​ 出版本号就说明可以用了。
 然后找一个主题，git clone​到 themes 文件夹。

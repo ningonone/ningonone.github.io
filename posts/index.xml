@@ -4,7 +4,36 @@
         <link>https://ningonone.github.io/posts/</link>
         <description>所有文章 | NINGO&#39;s Personal Website</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>949156636@qq.com (NINGO)</managingEditor>
-            <webMaster>949156636@qq.com (NINGO)</webMaster><lastBuildDate>Thu, 01 Dec 2022 09:36:28 &#43;0800</lastBuildDate><atom:link href="https://ningonone.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>949156636@qq.com (NINGO)</webMaster><lastBuildDate>Wed, 01 Feb 2023 18:00:28 &#43;0800</lastBuildDate><atom:link href="https://ningonone.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>MIPI LCD 移植调试流程</title>
+    <link>https://ningonone.github.io/mipi-lcd-%E7%A7%BB%E6%A4%8D%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B/</link>
+    <pubDate>Wed, 01 Feb 2023 18:00:28 &#43;0800</pubDate>
+    <author>NINGO</author>
+    <guid>https://ningonone.github.io/mipi-lcd-%E7%A7%BB%E6%A4%8D%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B/</guid>
+    <description><![CDATA[MIPI LCD 移植调试流程 一、提取 datasheet 中的关键信息 首先需要找屏厂索取屏的规格书，提取出关键的信息。
+Spec的目录大概如下：
+​​
+我们重点关注的是：
+General Specification ​屏幕规格
+Power on/off sequence 上电下电时序
+Timing 屏参
+‍
+1.General Specification ​ 主要找到分辨率、Mipi data 信号线通道数(一般是4 lane)，如果有RGB Bit 位数(6Bit/8Bit)、驱动IC的型号(Driver IC),也可将信息提取出来。
+‍
+2.Power on/off sequence ​​
+如果屏幕点不亮就需要首先看上电下电的时序。
+‍
+3.Timing ​​
+屏参及其计算 hsync_len 和vsync_len 分别是hsync和vsync 同步信号所需要的时间
+水平分辨率：hactive 垂直分辨率：vactive
+水平前肩：hfront-porch(HFP) 垂直前肩：vfront-porch(VFP)
+水平后肩：hback-porch(HBP) 垂直后肩：vback-porch(VBP)
+水平消隐信号：hsync-len(HS) 垂直消隐信号：vsync-len(VS)
+1.lane-rate = clk(时钟频率) * RGB(3) * BIT(6或8) / lane_num ，lane_num表示差分时钟通道数，也就是刚刚在 General Specification中提取的 Mipi data lane。
+2.帧率、屏参和时钟频率的关系： clock-frequency=(水平分辨率+HS+HBP+HFP)(垂直分辨率+VS+VBP=VFP)fps(帧频率)；
+原理图如下：]]></description>
+</item>
+<item>
     <title>使用Hugo搭建博客</title>
     <link>https://ningonone.github.io/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
     <pubDate>Thu, 01 Dec 2022 09:36:28 &#43;0800</pubDate>
