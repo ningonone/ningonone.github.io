@@ -70,7 +70,7 @@ Timing 屏参
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ningonone.github.io\/mipi-lcd-%E7%A7%BB%E6%A4%8D%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B\/"
-        },"image": ["https:\/\/ningonone.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "MIPI, Display","wordcount":  265 ,
+        },"image": ["https:\/\/ningonone.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "MIPI, Display","wordcount":  278 ,
         "url": "https:\/\/ningonone.github.io\/mipi-lcd-%E7%A7%BB%E6%A4%8D%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B\/","datePublished": "2023-02-01T18:00:28+08:00","dateModified": "2023-02-01T18:00:28+08:00","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/ningonone.github.io\/images\/avatar.png"},"author": {
@@ -79,7 +79,7 @@ Timing 屏参
             },"description": ""
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -144,7 +144,7 @@ Timing 屏参
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">MIPI LCD 移植调试流程</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>NINGO</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux-bsp/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux Bsp</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-01">2023-02-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 265 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-01">2023-02-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 278 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/mipi-lcd-%E7%A7%BB%E6%A4%8D%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B/" class="leancloud_visitors" data-flag-title="MIPI LCD 移植调试流程">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -172,6 +172,12 @@ Timing 屏参
       <ul>
         <li><a href="#检查供电">检查供电</a></li>
         <li><a href="#背光是否正常">背光是否正常</a></li>
+      </ul>
+    </li>
+    <li><a href="#三调试流程-1">三、调试流程</a>
+      <ul>
+        <li><a href="#检查供电-1">检查供电</a></li>
+        <li><a href="#背光是否正常-1">背光是否正常</a></li>
         <li><a href="#打印-mipi-lcd-相关-log-信息">打印 Mipi LCD 相关 Log 信息</a></li>
         <li><a href="#上电时序是否正常">上电时序是否正常</a></li>
       </ul>
@@ -282,7 +288,7 @@ Delay_ms 表示延时 xx 毫秒<br>
 表示给屏 0x11 指令，<strong>没有</strong>指令参数，并且延时 100ms<br>
 ​<code>GP_COMMAD_PA(01);SPI_WriteData(0x29); Delay_ms(30);</code>​<br>
 表示给屏 0x29 指令，<strong>没有</strong>指令参数，并且延时 30ms</p>
-<p>这涉及到了 dsi 协议中 dsi 传输的数据类型。<br>
+<p>这涉及到了 dsi 协议中 dsi 传输的数qqqqqq
 根据 《MIPI-DSI-specification.pdf》可以看到，有如下这些数据类型。</p>
 <figure><img src="/images/blog/image-20230201173759-30nzoop.png"/>
 </figure>
@@ -290,9 +296,22 @@ Delay_ms 表示延时 xx 毫秒<br>
 <h2 id="三调试流程">三、调试流程</h2>
 <h3 id="检查供电">检查供电</h3>
 <p>检查原理图上各个供电管脚的电压</p>
-<p>AVDD、VCOM、VDD、VGL、VGH是否满足电压要求。</p>
-<p>确认电压正常后，关机，上屏，结合开机 Log 看屏部分是否正常初始化。</p>
+<p>AVDD、VCOM、VDD、VGL、VGH是否满足电压要求。
+ww
+确认电压正常后，关机，上屏，结合开机 Log 看屏部分是否正常初始化。</p>
 <h3 id="背光是否正常">背光是否正常</h3>
+<p>背光没亮的话确认一下接上屏的qqqqqqqqqqqqqqqqqqqq
+根据 《MIPI-DSI-specification.pdf》可以看到，有如下这些数据类型。</p>
+<figure><img src="/images/blog/image-20230201173759-30nzoop.png"/>
+</figure>
+
+<h2 id="三调试流程-1">三、调试流程</h2>
+<h3 id="检查供电-1">检查供电</h3>
+<p>检查原理图上各个供电管脚的电压</p>
+<p>AVDD、VCOM、VDD、VGL、VGH是否满足电压要求。
+wwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+确认电压正常后，关机，上屏，结合开机 Log 看屏部分是否正常初始化。</p>
+<h3 id="背光是否正常-1">背光是否正常</h3>
 <p>背光没亮的话确认一下接上屏的时候，量一量 VDD_LCDA 的电压为多少<br>
 没有就去检查背光电路供电电压和 backlight 相关的配置（比如背光功能使能的 GPIO 有没有控制到、PWM通道是否配置正确）。</p>
 <p>‍</p>
@@ -347,7 +366,7 @@ Delay_ms 表示延时 xx 毫秒<br>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">NINGO</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
-
+        
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
                 <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">

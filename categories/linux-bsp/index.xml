@@ -4,7 +4,23 @@
         <link>https://ningonone.github.io/categories/linux-bsp/</link>
         <description>Linux Bsp - 分类 - NINGO&#39;s Personal Website</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>949156636@qq.com (NINGO)</managingEditor>
-            <webMaster>949156636@qq.com (NINGO)</webMaster><lastBuildDate>Wed, 01 Feb 2023 18:00:28 &#43;0800</lastBuildDate><atom:link href="https://ningonone.github.io/categories/linux-bsp/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>949156636@qq.com (NINGO)</webMaster><lastBuildDate>Fri, 10 Feb 2023 17:50:28 &#43;0800</lastBuildDate><atom:link href="https://ningonone.github.io/categories/linux-bsp/" rel="self" type="application/rss+xml" /><item>
+    <title>Camera Basic</title>
+    <link>https://ningonone.github.io/camera-basic/</link>
+    <pubDate>Fri, 10 Feb 2023 17:50:28 &#43;0800</pubDate>
+    <author>NINGO</author>
+    <guid>https://ningonone.github.io/camera-basic/</guid>
+    <description><![CDATA[Camera Basic 摄像头的分类 摄像头可分为数字摄像头和模拟摄像头两大类。
+数字摄像头可以将视频采集设备产生的模拟视频信号转换成数字信号，进而将其储存在计算机里。
+模拟摄像头捕捉到的视频信号必须经过特定的视频捕捉卡将模拟信号转换成数字模式，并加以压缩后才可以转换到计算机上运用。
+数字摄像头可以直接捕捉影像，然后通过串、并口或者USB接口传到计算机里。
+摄像头结构 一般来说，camera 主要是由 lens 和 sensor IC 两部分组成，其中有的 sensor IC 集成 了 DSP，有的没有集成，但也需要外部 DSP 处理。细分的来讲，camera 设备由下边几部 分构成：
+lens（镜头） 一般 camera 的镜头结构是有几片透镜组成，分有塑胶透镜（Plastic)和玻璃透镜(Glass) ，通常镜头结构有：1P,2P,1G1P,1G3P,2G2P,4G 等。
+sensor（图像传感器）是一种半导体芯片，有两种类型：CCD（Charge Coupled Device）即电荷耦合器件的缩写 和 CMOS（Complementary Metal-Oxide Semiconductor）互补金属氧化物半导体。
+sensor 将从 lens 上传导过来的光线转换为电信号， 再通过内部的 AD 转换为数字信号。 由于 sensor 的每个 pixel 只能感光 R 光或者 B 光或者 G 光， 因此每个像素此时存贮的是单色的， 我们称之为 RAW DATA 数据。
+要想将每个像素的 RAW DATA 数据还原成三基色，就需要 ISP 来处理。​ ISP（图像信号处理） 主要完成数字图像的处理工作，把 sensor 采集到的原始数据转换为显示支持的格式。]]></description>
+</item>
+<item>
     <title>MIPI LCD 移植调试流程</title>
     <link>https://ningonone.github.io/mipi-lcd-%E7%A7%BB%E6%A4%8D%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B/</link>
     <pubDate>Wed, 01 Feb 2023 18:00:28 &#43;0800</pubDate>
