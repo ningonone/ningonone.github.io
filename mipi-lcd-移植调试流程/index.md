@@ -125,23 +125,6 @@ Delay_ms 表示延时 xx 毫秒
 {{< figure src="/images/blog/image-20230201173759-30nzoop.png" >}}
 
 
-## 三、调试流程
-
-### 检查供电
-
-检查原理图上各个供电管脚的电压
-
-AVDD、VCOM、VDD、VGL、VGH是否满足电压要求。
-
-确认电压正常后，关机，上屏，结合开机 Log 看屏部分是否正常初始化。
-
-### 背光是否正常
-
-背光没亮的话确认一下接上屏的
-根据 《MIPI-DSI-specification.pdf》可以看到，有如下这些数据类型。
-
-{{< figure src="/images/blog/image-20230201173759-30nzoop.png" >}}
-
 
 ## 三、调试流程
 
