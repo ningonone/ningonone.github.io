@@ -10,8 +10,6 @@ tags:
 ---
 
 
-# MIPI LCD 移植调试流程
-
 ## 一、提取 datasheet 中的关键信息
 
 首先需要找屏厂索取屏的规格书，提取出关键的信息。
@@ -127,10 +125,11 @@ Delay_ms 表示延时 xx 毫秒
 ​`GP_COMMAD_PA(01);SPI_WriteData(0x29); Delay_ms(30);`​  
 表示给屏 0x29 指令，**没有**指令参数，并且延时 30ms
 
-这涉及到了 dsi 协议中 dsi 传输的数据类型。  
+这涉及到了 dsi 协议中 dsi 传输的数
 根据 《MIPI-DSI-specification.pdf》可以看到，有如下这些数据类型。
 
 {{< figure src="/images/blog/image-20230201173759-30nzoop.png" >}}
+
 
 
 ## 三、调试流程
@@ -140,7 +139,6 @@ Delay_ms 表示延时 xx 毫秒
 检查原理图上各个供电管脚的电压
 
 AVDD、VCOM、VDD、VGL、VGH是否满足电压要求。
-
 确认电压正常后，关机，上屏，结合开机 Log 看屏部分是否正常初始化。
 
 ### 背光是否正常

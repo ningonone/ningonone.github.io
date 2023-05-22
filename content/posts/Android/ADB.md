@@ -6,7 +6,6 @@ categories: [Android]
 tags: [ADB]
 ---
 
-# ADB
 
 ## 一、ADB是什么？
 
