@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Kernel - 标签 - NINGO&#39;s Personal Website</title>
+        <link>https://ningonone.github.io/tags/kernel/</link>
+        <description>Kernel - 标签 - NINGO&#39;s Personal Website</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>949156636@qq.com (NINGO)</managingEditor>
+            <webMaster>949156636@qq.com (NINGO)</webMaster><lastBuildDate>Mon, 22 May 2023 13:56:58 &#43;0800</lastBuildDate><atom:link href="https://ningonone.github.io/tags/kernel/" rel="self" type="application/rss+xml" /><item>
+    <title>Android 硬件信息客户化配置设计</title>
+    <link>https://ningonone.github.io/android-%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E5%AE%A2%E6%88%B7%E5%8C%96%E9%85%8D%E7%BD%AE%E8%AE%BE%E8%AE%A1/</link>
+    <pubDate>Mon, 22 May 2023 13:56:58 &#43;0800</pubDate>
+    <author>NINGO</author>
+    <guid>https://ningonone.github.io/android-%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E5%AE%A2%E6%88%B7%E5%8C%96%E9%85%8D%E7%BD%AE%E8%AE%BE%E8%AE%A1/</guid>
+    <description><![CDATA[前言 Android设备的硬件信息都是可以更具上层TextView来修改的，但是通过内核源码来修改就可以骗过绝大多数的第三方设备监测APP。第三方设备信息监测APP通常是通过读取/proc/cpuinfo​、/sys/devices/system/cpu/cpux​、/sys/devices/system/present​、/sys/devices/system/online​来获取CPU数量以及频率。
+以下四个是进行效果测试的APP：
+​​​ 其中AIDA64的检测结果为：
+​​​
+修改/proc/cpuinfo​​ 通过cat proc/cpuinfo​可以获取到CPU的信息如下，有些设备监测APP就是通过读取cpuinfo的信息来获取cpu数量，我们可以通过修改cpuinfo来修改cpu的数量。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 Processor : AArch64 Processor rev 4 (aarch64) processor : 0 BogoMIPS : 26.00 Features : fp asimd evtstrm aes pmull sha1 sha2 crc32 CPU implementer : 0x41 CPU architecture: 8 CPU variant : 0x0 CPU part : 0xd03 CPU revision : 4 processor : 1 BogoMIPS : 26.]]></description>
+</item>
+</channel>
+</rss>

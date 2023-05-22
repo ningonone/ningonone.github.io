@@ -10,7 +10,7 @@
     <pubDate>Thu, 02 Feb 2023 09:51:28 &#43;0800</pubDate>
     <author>NINGO</author>
     <guid>https://ningonone.github.io/adb/</guid>
-    <description><![CDATA[ADB 一、ADB是什么？ ADB，即 Android Debug Bridge 是一种允许模拟器或已连接的 Android 设备进行通信的命令行工具，它可为各种设备操作提供便利，如安装和调试应用，并提供对 Unix shell（可用来在模拟器或连接的设备上运行各种命令）的访问。可以在Android SDK/platform-tools中找到 adb 工具或下载 ADB Kits 。
+    <description><![CDATA[一、ADB是什么？ ADB，即 Android Debug Bridge 是一种允许模拟器或已连接的 Android 设备进行通信的命令行工具，它可为各种设备操作提供便利，如安装和调试应用，并提供对 Unix shell（可用来在模拟器或连接的设备上运行各种命令）的访问。可以在Android SDK/platform-tools中找到 adb 工具或下载 ADB Kits 。
 注： 有部分命令的支持情况可能与 Android 系统版本及定制 ROM 的实现有关。
 二、ADB有什么作用？ ADB 是 Android SDK 里的一个工具, 用这个工具可以直接操作管理Android模拟器或者真实的Android设备。它的主要功能有:
 在设备上运行Shell命令； 将本地APK软件安装至模拟器或Android设备； 管理设备或手机模拟器上的预定端口； 在设备或手机模拟器上复制或粘贴文件。 ADB 是一个客户端-服务器程序程序，包括三个组件：

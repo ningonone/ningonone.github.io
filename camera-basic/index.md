@@ -1,7 +1,6 @@
 # Camera Basic
 
 
-# Camera Basic
 
 ### 摄像头的分类
 
