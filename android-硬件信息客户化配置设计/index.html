@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <title>Android 硬件信息客户化配置设计 - NINGO&#39;s Personal Website</title>
         <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" /><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="Android 硬件信息客户化配置设计" />
-<meta property="og:description" content="前言 Android设备的硬件信息都是可以更具上层TextView来修改的，但是通过内核源码来修改就可以骗过绝大多数的第三方设备监测APP。第三方设备信息监测APP通常是通过读取/proc/cpuinfo​、/sys/devices/system/cpu/cpux​、/sys/devices/system/present​、/sys/devices/system/online​来获取CPU数量以及频率。
+<meta property="og:description" content="前言 Android设备的硬件信息都是可以根据上层TextView来修改的，但是通过内核源码来修改就可以骗过绝大多数的第三方设备监测APP。第三方设备信息监测APP通常是通过读取/proc/cpuinfo​、/sys/devices/system/cpu/cpux​、/sys/devices/system/present​、/sys/devices/system/online​来获取CPU数量以及频率。
 以下四个是进行效果测试的APP：
 ​​​ 其中AIDA64的检测结果为：
 ​​​
@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://ningonone.github.io/logo.png"/>
 
 <meta name="twitter:title" content="Android 硬件信息客户化配置设计"/>
-<meta name="twitter:description" content="前言 Android设备的硬件信息都是可以更具上层TextView来修改的，但是通过内核源码来修改就可以骗过绝大多数的第三方设备监测APP。第三方设备信息监测APP通常是通过读取/proc/cpuinfo​、/sys/devices/system/cpu/cpux​、/sys/devices/system/present​、/sys/devices/system/online​来获取CPU数量以及频率。
+<meta name="twitter:description" content="前言 Android设备的硬件信息都是可以根据上层TextView来修改的，但是通过内核源码来修改就可以骗过绝大多数的第三方设备监测APP。第三方设备信息监测APP通常是通过读取/proc/cpuinfo​、/sys/devices/system/cpu/cpux​、/sys/devices/system/present​、/sys/devices/system/online​来获取CPU数量以及频率。
 以下四个是进行效果测试的APP：
 ​​​ 其中AIDA64的检测结果为：
 ​​​
@@ -38,7 +38,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ningonone.github.io\/android-%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E5%AE%A2%E6%88%B7%E5%8C%96%E9%85%8D%E7%BD%AE%E8%AE%BE%E8%AE%A1\/"
-        },"image": ["https:\/\/ningonone.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Kernel","wordcount":  1418 ,
+        },"image": ["https:\/\/ningonone.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Kernel","wordcount":  1781 ,
         "url": "https:\/\/ningonone.github.io\/android-%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E5%AE%A2%E6%88%B7%E5%8C%96%E9%85%8D%E7%BD%AE%E8%AE%BE%E8%AE%A1\/","datePublished": "2023-05-22T13:56:58+08:00","dateModified": "2023-05-22T13:56:58+08:00","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/ningonone.github.io\/images\/avatar.png"},"author": {
@@ -112,8 +112,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Android 硬件信息客户化配置设计</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>NINGO</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux-bsp/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux Bsp</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-22">2023-05-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1418 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 7 分钟&nbsp;<span id="/android-%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E5%AE%A2%E6%88%B7%E5%8C%96%E9%85%8D%E7%BD%AE%E8%AE%BE%E8%AE%A1/" class="leancloud_visitors" data-flag-title="Android 硬件信息客户化配置设计">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-22">2023-05-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1781 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 9 分钟&nbsp;<span id="/android-%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E5%AE%A2%E6%88%B7%E5%8C%96%E9%85%8D%E7%BD%AE%E8%AE%BE%E8%AE%A1/" class="leancloud_visitors" data-flag-title="Android 硬件信息客户化配置设计">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -131,7 +131,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="前言">前言</h2>
-<p>Android设备的硬件信息都是可以更具上层TextView来修改的，但是通过内核源码来修改就可以骗过绝大多数的第三方设备监测APP。第三方设备信息监测APP通常是通过读取<code>/proc/cpuinfo</code>​、<code>/sys/devices/system/cpu/cpux</code>​、<code>/sys/devices/system/present</code>​、<code>/sys/devices/system/online</code>​来获取CPU数量以及频率。</p>
+<p>Android设备的硬件信息都是可以根据上层TextView来修改的，但是通过内核源码来修改就可以骗过绝大多数的第三方设备监测APP。第三方设备信息监测APP通常是通过读取<code>/proc/cpuinfo</code>​、<code>/sys/devices/system/cpu/cpux</code>​、<code>/sys/devices/system/present</code>​、<code>/sys/devices/system/online</code>​来获取CPU数量以及频率。</p>
 <p>以下四个是进行效果测试的APP：</p>
 <p><figure><img src="/images/blog/image-20230517201538-vkbai21.png"/>
 </figure>
@@ -184,44 +184,44 @@
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">Processor</span>       <span class="p">:</span> <span class="n">AArch64</span> <span class="n">Processor</span> <span class="n">rev</span> <span class="mi">4</span> <span class="p">(</span><span class="n">aarch64</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nl">processor</span>       <span class="p">:</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="nl">BogoMIPS</span>        <span class="p">:</span> <span class="mf">26.00</span>
-</span></span><span class="line"><span class="cl"><span class="nl">Features</span>        <span class="p">:</span> <span class="n">fp</span> <span class="n">asimd</span> <span class="n">evtstrm</span> <span class="n">aes</span> <span class="n">pmull</span> <span class="n">sha1</span> <span class="n">sha2</span> <span class="n">crc32</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">implementer</span> <span class="p">:</span> <span class="mh">0x41</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">architecture</span><span class="p">:</span> <span class="mi">8</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">variant</span>     <span class="p">:</span> <span class="mh">0x0</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">part</span>        <span class="p">:</span> <span class="mh">0xd03</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">revision</span>    <span class="p">:</span> <span class="mi">4</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Processor       : AArch64 Processor rev <span class="m">4</span> <span class="o">(</span>aarch64<span class="o">)</span>
+</span></span><span class="line"><span class="cl">processor       : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nl">processor</span>       <span class="p">:</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl"><span class="nl">BogoMIPS</span>        <span class="p">:</span> <span class="mf">26.00</span>
-</span></span><span class="line"><span class="cl"><span class="nl">Features</span>        <span class="p">:</span> <span class="n">fp</span> <span class="n">asimd</span> <span class="n">evtstrm</span> <span class="n">aes</span> <span class="n">pmull</span> <span class="n">sha1</span> <span class="n">sha2</span> <span class="n">crc32</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">implementer</span> <span class="p">:</span> <span class="mh">0x41</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">architecture</span><span class="p">:</span> <span class="mi">8</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">variant</span>     <span class="p">:</span> <span class="mh">0x0</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">part</span>        <span class="p">:</span> <span class="mh">0xd03</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">revision</span>    <span class="p">:</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl">processor       : <span class="m">1</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nl">processor</span>       <span class="p">:</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl"><span class="nl">BogoMIPS</span>        <span class="p">:</span> <span class="mf">26.00</span>
-</span></span><span class="line"><span class="cl"><span class="nl">Features</span>        <span class="p">:</span> <span class="n">fp</span> <span class="n">asimd</span> <span class="n">evtstrm</span> <span class="n">aes</span> <span class="n">pmull</span> <span class="n">sha1</span> <span class="n">sha2</span> <span class="n">crc32</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">implementer</span> <span class="p">:</span> <span class="mh">0x41</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">architecture</span><span class="p">:</span> <span class="mi">8</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">variant</span>     <span class="p">:</span> <span class="mh">0x0</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">part</span>        <span class="p">:</span> <span class="mh">0xd03</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">revision</span>    <span class="p">:</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl">processor       : <span class="m">2</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nl">processor</span>       <span class="p">:</span> <span class="mi">3</span>
-</span></span><span class="line"><span class="cl"><span class="nl">BogoMIPS</span>        <span class="p">:</span> <span class="mf">26.00</span>
-</span></span><span class="line"><span class="cl"><span class="nl">Features</span>        <span class="p">:</span> <span class="n">fp</span> <span class="n">asimd</span> <span class="n">evtstrm</span> <span class="n">aes</span> <span class="n">pmull</span> <span class="n">sha1</span> <span class="n">sha2</span> <span class="n">crc32</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">implementer</span> <span class="p">:</span> <span class="mh">0x41</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">architecture</span><span class="p">:</span> <span class="mi">8</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">variant</span>     <span class="p">:</span> <span class="mh">0x0</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">part</span>        <span class="p">:</span> <span class="mh">0xd03</span>
-</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="nl">revision</span>    <span class="p">:</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl">processor       : <span class="m">3</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nl">Hardware</span>        <span class="p">:</span> <span class="n">AC8257V</span><span class="o">/</span><span class="n">WAB</span>
+</span></span><span class="line"><span class="cl">Hardware        : AC8257V/WAB
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>cpuinfo的修改非常的简单，找到打印cpuinfo的函数，arm64架构在<code>kerenel/arch/arm64/kernel/cpuinfo.c</code>​中找到<code>c_show</code>​函数，直接修改打印输出的内容即可。</p>
@@ -452,7 +452,159 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>arm架构的cpuinfo打印函数可以在<code>kerenel/arch/arm64/kernel/setup.c</code>​中找到类似的<code>c_show</code>​函数，同理地直接修改打印输出的内容即可，最后得到的效果为如下所示。</p>
-<h2 id="修改cpuc">修改cpu.c</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Processor       : AArch64 Processor rev <span class="m">4</span> <span class="o">(</span>aarch64<span class="o">)</span>
+</span></span><span class="line"><span class="cl">processor       : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">processor       : <span class="m">1</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">processor       : <span class="m">2</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">processor       : <span class="m">3</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">processor       : <span class="m">4</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">processor       : <span class="m">5</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">processor       : <span class="m">6</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
+</span></span><span class="line"><span class="cl">Hardware        : AC8257V/WAB
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">processor       : <span class="m">7</span>
+</span></span><span class="line"><span class="cl">BogoMIPS        : 26.00
+</span></span><span class="line"><span class="cl">Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: <span class="m">8</span>
+</span></span><span class="line"><span class="cl">CPU variant     : 0x0
+</span></span><span class="line"><span class="cl">CPU part        : 0xd03
+</span></span><span class="line"><span class="cl">CPU revision    : <span class="m">4</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="修改cpuc">修改cpu.c</h2>
 <p>通过指令<code>ls /sys/devices/system/cpu -l</code>​我们可以得到cpuX的数量以及CPU在线离线、当前可用CPU、CPU频率等信息如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -654,31 +806,31 @@
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">7</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">cpu0</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">7</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">cpu1</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">7</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">cpu2</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">7</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">cpu3</span>
-</span></span><span class="line"><span class="cl"><span class="n">lrwxrwxrwx</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">cpu4</span> <span class="o">-&gt;</span> <span class="n">cpu0</span>
-</span></span><span class="line"><span class="cl"><span class="n">lrwxrwxrwx</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">cpu5</span> <span class="o">-&gt;</span> <span class="n">cpu0</span>
-</span></span><span class="line"><span class="cl"><span class="n">lrwxrwxrwx</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">cpu6</span> <span class="o">-&gt;</span> <span class="n">cpu0</span>
-</span></span><span class="line"><span class="cl"><span class="n">lrwxrwxrwx</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">cpu7</span> <span class="o">-&gt;</span> <span class="n">cpu0</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">3</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">cpufreq</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">cpuidle</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">cputopo</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">eas</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">hotplug</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">isolated</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">kernel_max</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">modalias</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">offline</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">online</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">possible</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">power</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">present</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">rq</span><span class="o">-</span><span class="n">stats</span>
-</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">0</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">sched</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="mi">2023</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="o">:</span><span class="mi">35</span> <span class="n">sched_isolated</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="mi">2010</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">01</span> <span class="mi">08</span><span class="o">:</span><span class="mo">00</span> <span class="n">uevent</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">drwxr-xr-x <span class="m">7</span> root root    <span class="m">0</span> 2010-01-01 08:00 cpu0
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">7</span> root root    <span class="m">0</span> 2010-01-01 08:00 cpu1
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">7</span> root root    <span class="m">0</span> 2010-01-01 08:00 cpu2
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">7</span> root root    <span class="m">0</span> 2010-01-01 08:00 cpu3
+</span></span><span class="line"><span class="cl">lrwxrwxrwx <span class="m">1</span> root root    <span class="m">0</span> 2023-03-29 21:35 cpu4 -&gt; cpu0
+</span></span><span class="line"><span class="cl">lrwxrwxrwx <span class="m">1</span> root root    <span class="m">0</span> 2023-03-29 21:35 cpu5 -&gt; cpu0
+</span></span><span class="line"><span class="cl">lrwxrwxrwx <span class="m">1</span> root root    <span class="m">0</span> 2023-03-29 21:35 cpu6 -&gt; cpu0
+</span></span><span class="line"><span class="cl">lrwxrwxrwx <span class="m">1</span> root root    <span class="m">0</span> 2023-03-29 21:35 cpu7 -&gt; cpu0
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">3</span> root root    <span class="m">0</span> 2010-01-01 08:00 cpufreq
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> root root    <span class="m">0</span> 2010-01-01 08:00 cpuidle
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> root root    <span class="m">0</span> 2010-01-01 08:00 cputopo
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> root root    <span class="m">0</span> 2010-01-01 08:00 eas
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> root root    <span class="m">0</span> 2010-01-01 08:00 hotplug
+</span></span><span class="line"><span class="cl">-r--r--r-- <span class="m">1</span> root root <span class="m">4096</span> 2023-03-29 21:35 isolated
+</span></span><span class="line"><span class="cl">-r--r--r-- <span class="m">1</span> root root <span class="m">4096</span> 2023-03-29 21:35 kernel_max
+</span></span><span class="line"><span class="cl">-r--r--r-- <span class="m">1</span> root root <span class="m">4096</span> 2023-03-29 21:35 modalias
+</span></span><span class="line"><span class="cl">-r--r--r-- <span class="m">1</span> root root <span class="m">4096</span> 2023-03-29 21:35 offline
+</span></span><span class="line"><span class="cl">-r--r--r-- <span class="m">1</span> root root <span class="m">4096</span> 2010-01-01 08:00 online
+</span></span><span class="line"><span class="cl">-r--r--r-- <span class="m">1</span> root root <span class="m">4096</span> 2010-01-01 08:00 possible
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> root root    <span class="m">0</span> 2010-01-01 08:00 power
+</span></span><span class="line"><span class="cl">-r--r--r-- <span class="m">1</span> root root <span class="m">4096</span> 2023-03-29 21:35 present
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> root root    <span class="m">0</span> 2010-01-01 08:00 rq-stats
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> root root    <span class="m">0</span> 2010-01-01 08:00 sched
+</span></span><span class="line"><span class="cl">-r--r--r-- <span class="m">1</span> root root <span class="m">4096</span> 2023-03-29 21:35 sched_isolated
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root <span class="m">4096</span> 2010-01-01 08:00 uevent
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="修改presentonline">修改present&amp;online</h2>
@@ -691,10 +843,10 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">demo</span><span class="p">:</span><span class="o">/</span> <span class="err">$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">devices</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">cpu</span><span class="o">/</span><span class="n">online</span>
-</span></span><span class="line"><span class="cl"><span class="mi">0</span><span class="o">-</span><span class="mi">3</span>
-</span></span><span class="line"><span class="cl"><span class="nl">demo</span><span class="p">:</span><span class="o">/</span> <span class="err">$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">devices</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">cpu</span><span class="o">/</span><span class="n">present</span>
-</span></span><span class="line"><span class="cl"><span class="mi">0</span><span class="o">-</span><span class="mi">3</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">demo:/ $ cat /sys/devices/system/cpu/online
+</span></span><span class="line"><span class="cl">0-3
+</span></span><span class="line"><span class="cl">demo:/ $ cat /sys/devices/system/cpu/present
+</span></span><span class="line"><span class="cl">0-3
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>我们可以在cpu.c中找到<code>show_cpus_attr</code>​函数，该函数是用来打印cpu online, possible, present, 和 system maps等信息的。我们可以如法炮制，直接将输出写死就好了。</p>
@@ -739,10 +891,10 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">demo</span><span class="p">:</span><span class="o">/</span> <span class="err">$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">devices</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">cpu</span><span class="o">/</span><span class="n">online</span>
-</span></span><span class="line"><span class="cl"><span class="mi">0</span><span class="o">-</span><span class="mi">7</span>
-</span></span><span class="line"><span class="cl"><span class="nl">demo</span><span class="p">:</span><span class="o">/</span> <span class="err">$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">devices</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">cpu</span><span class="o">/</span><span class="n">present</span>
-</span></span><span class="line"><span class="cl"><span class="mi">0</span><span class="o">-</span><span class="mi">7</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">demo:/ $ cat /sys/devices/system/cpu/online
+</span></span><span class="line"><span class="cl">0-7
+</span></span><span class="line"><span class="cl">demo:/ $ cat /sys/devices/system/cpu/present
+</span></span><span class="line"><span class="cl">0-7
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="最终效果">最终效果</h2>
