@@ -10,7 +10,7 @@ tags:
 
 ## 前言
 
-Android设备的硬件信息都是可以更具上层TextView来修改的，但是通过内核源码来修改就可以骗过绝大多数的第三方设备监测APP。第三方设备信息监测APP通常是通过读取`/proc/cpuinfo`​、`/sys/devices/system/cpu/cpux`​、`/sys/devices/system/present`​、`/sys/devices/system/online`​来获取CPU数量以及频率。
+Android设备的硬件信息都是可以根据上层TextView来修改的，但是通过内核源码来修改就可以骗过绝大多数的第三方设备监测APP。第三方设备信息监测APP通常是通过读取`/proc/cpuinfo`​、`/sys/devices/system/cpu/cpux`​、`/sys/devices/system/present`​、`/sys/devices/system/online`​来获取CPU数量以及频率。
 
 以下四个是进行效果测试的APP：
 
@@ -23,7 +23,7 @@ Android设备的硬件信息都是可以更具上层TextView来修改的，但�
 
 通过`cat proc/cpuinfo`​可以获取到CPU的信息如下，有些设备监测APP就是通过读取cpuinfo的信息来获取cpu数量，我们可以通过修改cpuinfo来修改cpu的数量。
 
-```c
+```shell
 Processor       : AArch64 Processor rev 4 (aarch64)
 processor       : 0
 BogoMIPS        : 26.00
@@ -180,6 +180,82 @@ static int c_show(struct seq_file *m, void *v)
 ```
 
 arm架构的cpuinfo打印函数可以在`kerenel/arch/arm64/kernel/setup.c`​中找到类似的`c_show`​函数，同理地直接修改打印输出的内容即可，最后得到的效果为如下所示。
+```shell
+Processor       : AArch64 Processor rev 4 (aarch64)
+processor       : 0
+BogoMIPS        : 26.00
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd03
+CPU revision    : 4
+
+processor       : 1
+BogoMIPS        : 26.00
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd03
+CPU revision    : 4
+
+processor       : 2
+BogoMIPS        : 26.00
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd03
+CPU revision    : 4
+
+processor       : 3
+BogoMIPS        : 26.00
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd03
+CPU revision    : 4
+
+processor       : 4
+BogoMIPS        : 26.00
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd03
+CPU revision    : 4
+
+processor       : 5
+BogoMIPS        : 26.00
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd03
+CPU revision    : 4
+
+processor       : 6
+BogoMIPS        : 26.00
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd03
+CPU revision    : 4
+Hardware        : AC8257V/WAB
+
+processor       : 7
+BogoMIPS        : 26.00
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd03
+CPU revision    : 4
+```
+
 
 ## 修改cpu.c
 
@@ -275,7 +351,7 @@ void __init cpu_dev_init(void)
 
 效果如下：
 
-```c
+```shell
 drwxr-xr-x 7 root root    0 2010-01-01 08:00 cpu0
 drwxr-xr-x 7 root root    0 2010-01-01 08:00 cpu1
 drwxr-xr-x 7 root root    0 2010-01-01 08:00 cpu2
@@ -307,7 +383,7 @@ drwxr-xr-x 2 root root    0 2010-01-01 08:00 sched
 
 有些设备信息监测APP读取CPU数量是通过`cat /sys/devices/system/present`​以及`cat /sys/devices/system/online`​来获取CPU核心数：
 
-```c
+```shell
 demo:/ $ cat /sys/devices/system/cpu/online
 0-3
 demo:/ $ cat /sys/devices/system/cpu/present
@@ -334,7 +410,7 @@ static ssize_t show_cpus_attr(struct device *dev,
 
 效果如下：
 
-```c
+```shell
 demo:/ $ cat /sys/devices/system/cpu/online
 0-7
 demo:/ $ cat /sys/devices/system/cpu/present
