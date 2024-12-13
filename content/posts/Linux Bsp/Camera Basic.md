@@ -3,7 +3,7 @@ title: "Camera Basic"
 date: 2023-02-10T17:50:28+08:00
 draft: false
 categories: 
-- Linux Bsp
+- Linux-Bsp
 tags: 
 - MIPI
 - Camera

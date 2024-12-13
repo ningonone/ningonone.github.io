@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+  <article class="post {{ .Site.Language.LanguageName }}" id="article">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="site-header">
+          {{ partial "header.html" . }}
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">{{ .Title }}</h1>
+        </header>
+
+        <!-- 密码保护部分 -->
+        {{ if .Site.Params.galleryPassword }}
+        <div id="password-protection">
+          <form id="password-form">
+            <label for="password">请输入密码：</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">提交</button>
+          </form>
+          <p id="password-error" style="color: red; display: none;">密码错误，请重试！</p>
+        </div>
+        {{ end }}
+
+        <!-- 图库内容 -->
+        <div id="gallery-content" {{ if .Site.Params.galleryPassword }}style="display: none;"{{ end }}>
+          <div class="post-content page-content markdown-body">
+            <div class="row gallery">
+              {{ range .Params.gallery }}
+              <div class="col-xs-6 gallery-img">
+                <img src="{{ .url }}" alt="{{ .name }}">
+                <span class="gallery-img-desc">{{ .name }}</span>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+        {{ if .Site.Params.disqus }}
+        <div class="post-comments">
+          {{ partial "disqus.html" . }}
+        </div>
+        {{ end }}
+
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+  </article>
+
+  {{ partial "scripts.html" . }}
+  {{ if .Site.Params.extraBody }}
+  {{ .Site.Params.extraBody | safeHTML }}
+  {{ end }}
+
+  <!-- 密码保护的 JavaScript 逻辑 -->
+  {{ if .Site.Params.galleryPassword }}
+  <script>
+    // 从 config.toml 中读取密码
+    const correctPassword = "{{ .Site.Params.galleryPassword }}";
+    console.log("Correct Password:", correctPassword);  // 调试输出
+
+    // 获取表单和错误提示元素
+    const passwordForm = document.getElementById("password-form");
+    const passwordError = document.getElementById("password-error");
+    const galleryContent = document.getElementById("gallery-content");
+
+    // 监听表单提交事件
+    passwordForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // 阻止表单提交
+
+      // 获取用户输入的密码
+      const userPassword = document.getElementById("password").value;
+
+      // 验证密码
+      if (userPassword === correctPassword) {
+        // 密码正确，显示图库内容
+        document.getElementById("password-protection").style.display = "none";
+        galleryContent.style.display = "block";
+      } else {
+        // 密码错误，显示错误提示
+        passwordError.style.display = "block";
+      }
+    });
+  </script>
+  {{ end }}
+</body>
+
+</html>

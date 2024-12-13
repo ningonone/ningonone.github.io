@@ -3,7 +3,7 @@ title: "Android 硬件信息客户化配置设计"
 date: 2023-05-22T13:56:58+08:00
 draft: flase
 categories: 
-- Linux Bsp
+- Linux-Bsp
 tags: 
 - Kernel
 ---

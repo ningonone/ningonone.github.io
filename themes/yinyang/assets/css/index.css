@@ -1,0 +1,332 @@
+/* 引入 Space Mono 字体 */
+@font-face {
+  font-family: 'Space Mono';
+  src: url('/fonts/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 引入 朱雀仿宋 字体 */
+@font-face {
+  font-family: 'Zhuque Fangsong';
+  src: url('/fonts/ZhuqueFangsong.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* global */
+
+body {
+  font-family: 'Space Mono', 'Zhuque Fangsong';
+  -webkit-font-smoothing: antialiased;
+  margin: 0 20px;
+  background-color: #2D353B; /* 新的背景颜色 */
+  color: #c9d1d9; /* GitHub 浅灰色文本 */
+}
+
+article {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #c9d1d9; /* 链接颜色改为白色 */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #58a6ff; /* 鼠标悬浮时变为蓝色 */
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.post-ads {
+  margin: 50px 0;
+}
+
+.markdown-body {
+  font-size: 18px;
+  max-width: 100%;
+}
+
+.markdown-body a {
+  text-decoration: underline;
+  text-decoration-color: #c9d1d9; /* 链接颜色改为白色 */
+}
+
+.markdown-body a:hover {
+  text-decoration-color: #58a6ff; /* 鼠标悬浮时变为蓝色 */
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: #8b949e; /* GitHub 浅灰色 */
+  border-left: 0.25em solid #c9d1d9; /* GitHub 浅灰色边框 */
+}
+
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  background-color: #161b22; /* GitHub 深灰色背景 */
+  border: 1px solid #30363d; /* GitHub 浅灰色边框 */
+  border-radius: 10px;
+}
+
+.markdown-body code {
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  background-color: rgba(110,118,129,0.4); /* GitHub 半透明背景 */
+  color: #c9d1d9; /* GitHub 浅灰色文本 */
+  border-radius: 6px;
+}
+
+/* reset code */
+
+.markdown-body pre > code {
+  padding: 0;
+  font-size: 100%;
+  background-color: inherit;
+  border: 0;
+}
+
+/* i18n */
+
+.Chinese .markdown-body {
+  line-height: 200%;
+}
+
+/* header */
+
+.site-date-catalog {
+  font-size: 2rem;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 32px;
+  font-family: "Bungee Shade", sans-serif;
+  color: #c9d1d9; /* GitHub 浅灰色文本 */
+}
+
+.header-title a {
+  text-decoration: none;
+  color: #c9d1d9; /* 链接颜色改为白色 */
+}
+
+.header-title a:hover {
+  color: #58a6ff; /* 鼠标悬浮时变为蓝色 */
+}
+
+.header-subtitle {
+  color: #8b949e; /* GitHub 浅灰色 */
+}
+
+.header-items {
+  margin: 10px 0;
+}
+
+.header-item {
+  margin: 0 5px;
+}
+
+.header-line {
+  width: 100%;
+  border-width: 2px;
+  border-color: #c9d1d9; /* GitHub 浅灰色边框 */
+  border-style: solid none none none;
+}
+
+.lang-switch {
+  font-weight: 600;
+}
+
+/* posts list */
+
+#posts-list {
+  min-height: 600px;
+}
+
+.posts-line {
+  font-size: 1.2rem;
+  margin: 12px 0;
+}
+
+.posts-categories {
+  font-size: 0.8rem;
+  margin: auto;
+  text-align: center;
+}
+
+.posts-category {
+  padding: 3px 0;
+  border: 2px solid #c9d1d9; /* GitHub 浅灰色边框 */
+  border-radius: 5px;
+}
+
+.site-footer {
+  margin-top: 50px;
+  border-width: 3px;
+  border-style: solid none;
+  border-color: #2D353B; /* GitHub 浅灰色边框 */
+}
+
+.site-footer-item {
+  margin-right: 12px;
+}
+
+/* post */
+
+.post-header {
+  margin-bottom: 50px;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #c9d1d9; /* GitHub 浅灰色文本 */
+}
+
+.post-tags {
+  display: inline;
+  font-weight: 600;
+  padding: 2px 5px;
+  margin-right: 6px;
+  border: 2px solid #c9d1d9; /* GitHub 浅灰色边框 */
+  border-radius: 5px;
+  color: #c9d1d9; /* GitHub 浅灰色文本 */
+}
+
+.post-date {
+  font-weight: 800;
+  font-style: italic;
+  color: #8b949e; /* GitHub 浅灰色 */
+}
+
+.post-author {
+  float: right;
+  font-weight: 600;
+  color: #8b949e; /* GitHub 浅灰色 */
+}
+
+.page-content {
+  min-height: 60%;
+}
+
+.post-content {
+  margin-bottom: 50px;
+}
+
+.post-content p {
+  hyphens: auto;
+  line-height: 1.8;
+  margin-bottom: 1em;
+  color: #c9d1d9; /* GitHub 浅灰色文本 */
+}
+
+.post-content img {
+  max-width: 100%;
+  display: block;
+  margin-right: auto;
+  margin-top: 6px;
+}
+
+.post-content .post-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.post-content .post-gallery img {
+  margin-right: auto;
+  margin-top: auto;
+  width: calc(50% - 3px);
+}
+
+.related-content {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #c9d1d9; /* GitHub 浅灰色边框 */
+  padding: 0 10px;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.related-content li {
+  margin: 5px 0;
+  color: #c9d1d9; /* GitHub 浅灰色文本 */
+}
+
+/* taxonomy */
+
+.taxonomy-term {
+  font-size: 3rem;
+  color: #c9d1d9; /* GitHub 浅灰色文本 */
+}
+
+/* gallery */
+
+.gallery-img {
+  text-align: center;
+}
+
+.gallery-img span {
+  text-align: center;
+}
+
+.gallery-img-desc {
+  font-size: 0.8em;
+  font-weight: 800;
+  color: #c9d1d9; /* GitHub 浅灰色文本 */
+}
+
+/* disqus */
+
+#disqus_thread {
+  position: relative;
+}
+
+#disqus_thread:after {
+  content: "";
+  display: block;
+  height: 55px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #2D353B; /* 新的背景颜色 */
+}
+
+@media screen and (max-width: 600px) {
+  .header-title,
+  .header-subtitle,
+  .header-items {
+    /* text-align: center; */
+  }
+
+  .posts-line {
+    font-size: 16px;
+  }
+
+  .markdown-body {
+    font-size: 16px;
+  }
+  .post-title {
+    font-size: 2rem;
+  }
+  .post-content p {
+    letter-spacing: 0.05em;
+  }
+  .post-content .post-gallery img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .posts-category {
+    display: none;
+  }
+}

@@ -3,7 +3,7 @@ title: "MIPI LCD 移植调试流程"
 date: 2023-02-01T18:00:28+08:00
 draft: false
 categories: 
-- Linux Bsp
+- Linux-Bsp
 tags: 
 - MIPI
 - Display
