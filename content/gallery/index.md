@@ -4,11 +4,11 @@ date = "2023-10-01"
 type = "gallery"  # 可选：定义页面类型
 layout = "single"  # 可选：定义页面布局
 [[gallery]]
-    url = "/images/gallery/wallpaper1.jpg"
+    url = "/images/gallery/bg1.jpg"
 [[gallery]]
-    url = "/images/gallery/wallpaper2.png"
+    url = "/images/gallery/gb2.jpg"
 [[gallery]]
-    url = "/images/gallery/wallpaper3.jpg"
+    url = "/images/gallery/bg3.jpg"
 [[gallery]]
-    url = "/images/gallery/wallpaper4.jpg"
+    url = "/images/gallery/bg4.jpg"
 +++

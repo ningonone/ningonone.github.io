@@ -9,7 +9,7 @@ headTitle = "NINGO"
 description = "store some memories here..." 
 extraHead = ''
 mainSections = ["posts"]
-galleryPassword = "123123"
+galleryPassword = "106078"
 
 
 [[params.socials]]
