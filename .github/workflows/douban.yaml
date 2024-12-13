@@ -3,6 +3,7 @@ name: douban
 on: 
   schedule:
   - cron: "0 0 * * *"  # 修正后的 cron 表达式
+  workflow_dispatch:
 
 jobs:
   douban:
