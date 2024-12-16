@@ -1,6 +1,6 @@
-baseURL = "https://example.com"
+baseURL = "https://ningonone.github.io"
 languageCode = "zh-CN"
-title = "Example YinYong Blog"
+title = "NINGO's Blog"
 theme = "yinyang"
 
 [params]
@@ -10,7 +10,7 @@ description = "store some memories here..."
 extraHead = ''
 mainSections = ["posts"]
 galleryPassword = "106078"
-
+favicon = "/static/images/avatar.png"
 
 [[params.socials]]
 name = "Post"
