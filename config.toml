@@ -15,9 +15,12 @@ favicon = "/static/images/avatar.png"
 [[params.socials]]
 name = "Post"
 link = "/index.html"
-target = "_self"
+
+[[params.socials]]
+name = "Movies"
+link = "/movies/"
+
 
 [[params.socials]]
 name = "Gallery"
 link = "/gallery/"
-target = "_self"

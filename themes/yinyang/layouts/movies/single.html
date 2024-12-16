@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+{{ partial "head.html" . }}
+
+<body>
+  <article class="post {{ .Site.Language.LanguageName }}" id="article">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="site-header">
+          {{ partial "header.html" . }}
+        </div>
+
+        <header class="post-header">
+          <h1 class="post-title">观影</h1>
+        </header>
+
+        <div class="page-content markdown-body movies-container">
+          <!-- 电影列表 -->
+          <div class="movies-list">
+            {{ $csvContent := readFile "data/douban/movie.csv" }}
+            {{ $csvLines := split $csvContent "\n" }}
+            {{ $headers := index $csvLines 0 | split "," }}
+            {{ range after 1 $csvLines }}
+              {{ $fields := split . "," }}
+              <div class="movie-card">
+                <img src="{{ index $fields 3 }}" alt="{{ index $fields 1 }}" class="movie-poster">
+                <div class="movie-overlay">
+                  <div class="movie-info">
+                    <p class="movie-title">{{ index $fields 1 }}</p>
+                    <p class="movie-rating">评分：{{ index $fields 6 }}</p>
+                    <p class="movie-genres">类型：{{ index $fields 7 }}</p>
+                    <p class="movie-pubdate">上映日期：{{ index $fields 4 }}</p>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+  </article>
+
+  {{ partial "scripts.html" . }}
+</body>
+</html>

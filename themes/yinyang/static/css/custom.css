@@ -71,3 +71,48 @@
     visibility: visible;
     opacity: 1;
   }
+  
+
+  /*movies css*/
+  /* 瀑布流布局使用 CSS Grid 或 Flexbox，这里使用 CSS Grid */
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.movie-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.05);
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
