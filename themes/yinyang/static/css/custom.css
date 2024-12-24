@@ -74,45 +74,66 @@
   
 
   /*movies css*/
-  /* 瀑布流布局使用 CSS Grid 或 Flexbox，这里使用 CSS Grid */
 .movies-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.movie-card {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+.movie-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #c9d1d9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.movie-poster {
-  width: 100%;
+.movie-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.movie-poster img {
+  width: 120px;
   height: auto;
-  display: block;
-  transition: transform 0.3s ease;
+  border-radius: 4px;
 }
 
-.movie-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+.movie-details {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-title {
+  font-size: 18px;
+  color: #555;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.movie-star {
   display: flex;
   align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  gap: 5px;
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
 }
 
-.movie-card:hover .movie-poster {
-  transform: scale(1.05);
+.movie-star-time,
+.movie-comment {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
 }
 
-.movie-card:hover .movie-overlay {
-  opacity: 1;
+.movie-star-time {
+  color: #888;
 }
+

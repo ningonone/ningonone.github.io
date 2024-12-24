@@ -13,26 +13,60 @@
         <header class="post-header">
           <h1 class="post-title">观影</h1>
         </header>
-
         <div class="page-content markdown-body movies-container">
-          <!-- 电影列表 -->
           <div class="movies-list">
-            {{ $csvContent := readFile "data/douban/movie.csv" }}
-            {{ $csvLines := split $csvContent "\n" }}
-            {{ $headers := index $csvLines 0 | split "," }}
-            {{ range after 1 $csvLines }}
-              {{ $fields := split . "," }}
-              <div class="movie-card">
-                <img src="{{ index $fields 3 }}" alt="{{ index $fields 1 }}" class="movie-poster">
-                <div class="movie-overlay">
-                  <div class="movie-info">
-                    <p class="movie-title">{{ index $fields 1 }}</p>
-                    <p class="movie-rating">评分：{{ index $fields 6 }}</p>
-                    <p class="movie-genres">类型：{{ index $fields 7 }}</p>
-                    <p class="movie-pubdate">上映日期：{{ index $fields 4 }}</p>
+            {{ $movies := resources.Get "movie.csv" | transform.Unmarshal }}
+            {{ $scratch := newScratch }}
+            {{ $scratch.Add "genres" slice }}
+
+            <!-- 提取所有的电影类型（Genres） -->
+            {{ range $idx, $movie := $movies }}
+              {{ if ne $idx 0 }}
+                {{ $scratch.Set "genres" (union ($scratch.Get "genres") (split (index $movie 7) ",")) }}
+              {{ end }}
+            {{ end }}
+
+            <!-- 渲染电影列表 -->
+            {{ range $idx, $movie := $movies }}
+              {{ if ne $idx 0 }}
+                {{ $name := index $movie 1 }}
+                {{ $url := index $movie 5}}
+                {{ $poster := index $movie 3 }}
+                {{ $rating := index $movie 8 }}
+                {{ $comment := index $movie 9 }}
+                {{ $star_time := index $movie 11 }}
+
+                <div class="movie-item" onclick="location.href='{{ $url }}'" style="cursor: pointer;">
+                  <!-- <div class="movie-poster">
+                    <img src="{{ $poster }}" alt="{{ $name }}">
+                  </div> -->
+                  <div class="movie-details">
+                    <h3 class="movie-title">{{ $name }}</h3>
+                    <div class="movie-star">
+                      <div class="movie-rating">
+                        {{ if $rating }}
+                          <p>My Star:
+                          {{ $ratingCount := int (default 0 $rating) }}
+                          {{ range seq $ratingCount }}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                              <path fill="#c0aa0f" d="M10.788 3.102c.495-1.003 1.926-1.003 2.421 0l2.358 4.778l5.273.766c1.107.16 1.549 1.522.748 2.303l-3.816 3.719l.901 5.25c.19 1.104-.968 1.945-1.959 1.424l-4.716-2.48l-4.715 2.48c-.99.52-2.148-.32-1.96-1.423l.901-5.251l-3.815-3.72c-.801-.78-.359-2.141.748-2.302L8.43 7.88z"/>
+                            </svg>
+                          {{ end }}
+                          </p>
+                        {{ end }}
+                      </div>                      
+                    </div>
+                    {{ if $comment }}
+                      <div class="movie-comment">
+                        Comment: {{ $comment }}
+                      </div>
+                    {{ end }}
+                      <div class ="movie-star-time">
+                         Date: {{ $star_time }}
+                      </div>
                   </div>
                 </div>
-              </div>
+              {{ end }}
             {{ end }}
           </div>
         </div>
@@ -45,3 +79,4 @@
   {{ partial "scripts.html" . }}
 </body>
 </html>
+
