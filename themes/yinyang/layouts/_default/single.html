@@ -29,6 +29,11 @@
             </div>
           </div>
           {{ end }}
+          {{ if .Site.Params.showToc }}
+          <div id="post-toc" class="post-toc">
+            {{ .TableOfContents }}       
+          </div>
+          {{ end }}
         </header>
 
         <div class="post-content markdown-body">

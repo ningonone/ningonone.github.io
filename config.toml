@@ -1,6 +1,6 @@
 baseURL = "https://ningonone.github.io"
 languageCode = "zh-CN"
-title = "NINGO's Blog"
+title = "ningonone's blog"
 theme = "yinyang"
 
 [params]
@@ -10,7 +10,8 @@ description = "store some memories here..."
 extraHead = ''
 mainSections = ["posts"]
 galleryPassword = "106078"
-favicon = "/static/images/avatar.png"
+favicon = "/images/avatar.png"
+showToc = true
 
 [[params.socials]]
 name = "Post"
@@ -18,9 +19,9 @@ link = "/index.html"
 
 [[params.socials]]
 name = "Movies"
-link = "/movies/"
+link = "/pages/movies"
 
 
 [[params.socials]]
 name = "Gallery"
-link = "/gallery/"
+link = "/pages/gallery"

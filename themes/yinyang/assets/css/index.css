@@ -330,3 +330,58 @@ a:hover {
     display: none;
   }
 }
+
+/* 目录容器样式 */
+.post-toc {
+  margin-top: 15px;
+  background-color: #2D353B;
+  padding: 8px; /* 调整外部 padding */
+  border: 2px solid #c9d1d9;
+  border-radius: 5px;
+  overflow-y: auto;
+  color: #c9d1d9;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+/* 目录项链接 */
+.post-toc a {
+  color: #c9d1d9;
+  text-decoration: none;
+  display: block; 
+  padding: 5px 0; 
+}
+
+/* 目录项 hover 效果 */
+.post-toc a:hover {
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+/* 去掉 ul 默认样式 */
+.post-toc ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.post-toc li {
+  margin-bottom: 1px; 
+}
+
+.post-toc ul ul {
+  padding-left: 20px;
+}
+
+.post-toc li > ul > li {
+  padding-left: 20px; 
+}
+
+.post-toc li > ul > ul > li {
+  padding-left: 40px;
+}
+
+.post-toc li > ul > ul > ul > li {
+  padding-left: 60px; 
+}
