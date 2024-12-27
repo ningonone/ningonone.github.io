@@ -19,9 +19,9 @@ link = "/index.html"
 
 [[params.socials]]
 name = "Movies"
-link = "/pages/movies"
+link = "/pages/movies/"
 
 
 [[params.socials]]
 name = "Gallery"
-link = "/pages/gallery"
+link = "/pages/gallery/"

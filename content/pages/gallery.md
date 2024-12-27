@@ -2,12 +2,16 @@
 title = "相册"
 date = "2023-10-01"
 layout = "gallery"
-[[gallery]]
-    url = "/images/gallery/bg1.jpg"
-[[gallery]]
-    url = "/images/gallery/gb2.jpg"
-[[gallery]]
-    url = "/images/gallery/bg3.jpg"
-[[gallery]]
-    url = "/images/gallery/bg4.jpg"
 +++
+## 2024
+{{<gallery
+    globalMatch="images/*"
+    sortOrder="asc"
+    rowHeight="150"
+    margins="5"
+    thumbnailResizeOptions="600x600 q90 Lanczos"
+    showExif=true
+    previewType="blur"
+    embedPreview=true
+    loadJQuery=true
+>}}
