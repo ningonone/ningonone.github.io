@@ -1,31 +1,34 @@
-name: Githubblog
+name: Deploy Hugo Site to GitHub Pages
 
 on:
   workflow_dispatch:
   push:
     branches:
-      - master 
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true
-          fetch-depth: 0
 
+    steps:
+      # 1. 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 如果使用了 Hugo 主题作为子模块，需要启用递归
+          fetch-depth: 0    # 获取完整的 Git 历史记录
+
+      # 2. 安装 Hugo Extended
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
-          extended: true
+          hugo-version: 'latest'  # 使用最新版本
+          extended: true          # 使用扩展版
 
-      - name: Build
+      # 3. 构建 Hugo 站点
+      - name: Build Hugo site
         run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./public
+      # 4. 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
